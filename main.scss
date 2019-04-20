@@ -48,11 +48,17 @@ body {
   text-align: center;
   min-height: 200px;
   align-items: flex-end;
-  @include media-breakpoint-down(lg) {
-    img {
-      margin: auto;
-      max-height: 30em;
-      margin-bottom: 2em;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2em;
+  }
+
+  img {
+    max-height: 40vh;
+    margin: auto;
+    @include media-breakpoint-up(lg) {
+      max-height: 100vh;
+      margin-bottom: 0em;
     }
   }
 }
