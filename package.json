@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
-    "prod": "sh build-deploy",
+    "prod": "parcel build index.html --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
+  },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.0.0",
+    "posthtml-expressions": "^1.1.0"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",

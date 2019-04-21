@@ -1,4 +1,0 @@
-#!/bin/sh
-set -e
-parcel build index.html --public-url ./
-cp _redirects dist/_redirects
