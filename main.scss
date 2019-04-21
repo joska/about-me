@@ -1,12 +1,12 @@
-@import "./node_modules/bootstrap/scss/functions";
-@import "./node_modules/bootstrap/scss/variables";
-@import "./node_modules/bootstrap/scss/mixins";
-@import "./node_modules/bootstrap/scss/root";
-@import "./node_modules/bootstrap/scss/reboot";
-@import "./node_modules/bootstrap/scss/type";
+@import './node_modules/bootstrap/scss/functions';
+@import './node_modules/bootstrap/scss/variables';
+@import './node_modules/bootstrap/scss/mixins';
+@import './node_modules/bootstrap/scss/root';
+@import './node_modules/bootstrap/scss/reboot';
+@import './node_modules/bootstrap/scss/type';
 //@import "./node_modules/bootstrap/scss/images";
 //@import "./node_modules/bootstrap/scss/code";
-@import "./node_modules/bootstrap/scss/grid";
+@import './node_modules/bootstrap/scss/grid';
 //@import "./node_modules/bootstrap/scss/tables";
 // @import "./node_modules/bootstrap/scss/forms";
 // @import "./node_modules/bootstrap/scss/buttons";
@@ -20,11 +20,11 @@
 //@import "./node_modules/bootstrap/scss/card";
 //@import "./node_modules/bootstrap/scss/breadcrumb";
 //@import "./node_modules/bootstrap/scss/pagination";
-@import "./node_modules/bootstrap/scss/badge";
+@import './node_modules/bootstrap/scss/badge';
 //@import "./node_modules/bootstrap/scss/jumbotron";
 //@import "./node_modules/bootstrap/scss/alert";
 //@import "./node_modules/bootstrap/scss/progress";
-@import "./node_modules/bootstrap/scss/media";
+@import './node_modules/bootstrap/scss/media';
 //@import "./node_modules/bootstrap/scss/list-group";
 //@import "./node_modules/bootstrap/scss/close";
 //@import "./node_modules/bootstrap/scss/modal";
@@ -32,87 +32,143 @@
 //@import "./node_modules/bootstrap/scss/popover";
 //@import "./node_modules/bootstrap/scss/carousel";
 // @import "./node_modules/bootstrap/scss/spinners";
-@import "./node_modules/bootstrap/scss/utilities";
-@import "./node_modules/bootstrap/scss/print";
+@import './node_modules/bootstrap/scss/utilities';
+@import './node_modules/bootstrap/scss/print';
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,700&subset=latin-ext");
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700&subset=latin-ext');
 
 body {
-  color: #5f5145;
-  font-family: "Raleway", sans-serif;
+   color: #5f5145;
+   font-family: 'Raleway', sans-serif;
 }
 .photo {
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  min-height: 200px;
-  align-items: flex-end;
-  @include media-breakpoint-down(md) {
-    margin-bottom: 2em;
-  }
-  img {
-    max-height: 40vh;
-    margin: auto;
-    @include media-breakpoint-up(lg) {
-      max-height: 100vh;
-      margin-bottom: 0em;
-    }
-  }
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   min-height: 200px;
+   align-items: flex-end;
+   @include media-breakpoint-down(md) {
+      margin-bottom: 2em;
+   }
+   img {
+      max-height: 40vh;
+      margin: auto;
+      @include media-breakpoint-up(lg) {
+         max-height: 100vh;
+         margin-bottom: 0em;
+      }
+   }
 }
 .about-me {
-  padding-right: 2em;
-  flex-direction: column;
-  justify-content: center;
-  h1 {
-    letter-spacing: 0.02em;
-  }
-  p {
-    line-height: 1.75em;
-    font-size: 1.1em;
-    letter-spacing: 0.02em;
-  }
-  a {
-    color: #5f5145;
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
-  }
+   padding-right: 2em;
+   flex-direction: column;
+   justify-content: center;
+   @include media-breakpoint-up(md) {
+      -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 1.5s; /* Firefox < 16 */
+      -ms-animation: fadein 1.5s; /* Internet Explorer */
+      -o-animation: fadein 1.5s; /* Opera < 12.1 */
+      animation: fadein 1.5s;
+   }
+   @keyframes fadein {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+
+   /* Firefox < 16 */
+   @-moz-keyframes fadein {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+
+   /* Safari, Chrome and Opera > 12.1 */
+   @-webkit-keyframes fadein {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+
+   /* Internet Explorer */
+   @-ms-keyframes fadein {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+
+   /* Opera < 12.1 */
+   @-o-keyframes fadein {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+
+   h1 {
+      letter-spacing: 0.02em;
+   }
+   p {
+      line-height: 1.75em;
+      font-size: 1.1em;
+      letter-spacing: 0.02em;
+   }
+   a {
+      color: #5f5145;
+      text-decoration: underline;
+      &:hover {
+         text-decoration: none;
+      }
+   }
 }
 .contact {
-  padding: 0;
-  li {
-    list-style-type: none;
-    line-height: 1.75em;
-    font-size: 1.1em;
-    letter-spacing: 0.02em;
-  }
-  a {
-    color: #5f5145;
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
-  }
+   padding: 0;
+   li {
+      list-style-type: none;
+      line-height: 1.75em;
+      font-size: 1.1em;
+      letter-spacing: 0.02em;
+   }
+   a {
+      color: #5f5145;
+      text-decoration: underline;
+      &:hover {
+         text-decoration: none;
+      }
+   }
 }
 .social {
-  .badge[href]:focus img,
-  .badge[href]:hover img {
-    opacity: 0.8;
-  }
-  @include media-breakpoint-down(sm) {
-    justify-content: center;
-    .badge {
-      padding: 0.5em 1em;
-    }
-  }
-  @include media-breakpoint-up(md) {
-    .badge {
-      padding: 0.25em 0.6em;
-      // Align first item with the text left border
-      &:first-child {
-        padding-left: 0;
+   .badge[href]:focus img,
+   .badge[href]:hover img {
+      opacity: 0.8;
+   }
+   @include media-breakpoint-down(sm) {
+      justify-content: center;
+      .badge {
+         padding: 0.5em 1em;
       }
-    }
-  }
+   }
+   @include media-breakpoint-up(md) {
+      .badge {
+         padding: 0.25em 0.6em;
+         // Align first item with the text left border
+         &:first-child {
+            padding-left: 0;
+         }
+      }
+   }
 }
