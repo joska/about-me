@@ -71,6 +71,13 @@ body {
     font-size: 1.1em;
     letter-spacing: 0.02em;
   }
+  a {
+    color: #5f5145;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 .contact {
   padding: 0;
