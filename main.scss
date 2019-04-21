@@ -20,7 +20,7 @@
 //@import "./node_modules/bootstrap/scss/card";
 //@import "./node_modules/bootstrap/scss/breadcrumb";
 //@import "./node_modules/bootstrap/scss/pagination";
-// @import "./node_modules/bootstrap/scss/badge";
+@import "./node_modules/bootstrap/scss/badge";
 //@import "./node_modules/bootstrap/scss/jumbotron";
 //@import "./node_modules/bootstrap/scss/alert";
 //@import "./node_modules/bootstrap/scss/progress";
@@ -31,9 +31,10 @@
 //@import "./node_modules/bootstrap/scss/tooltip";
 //@import "./node_modules/bootstrap/scss/popover";
 //@import "./node_modules/bootstrap/scss/carousel";
+// @import "./node_modules/bootstrap/scss/spinners";
 @import "./node_modules/bootstrap/scss/utilities";
 @import "./node_modules/bootstrap/scss/print";
-// @import "./node_modules/bootstrap/scss/spinners";
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,700&subset=latin-ext");
 
 body {
@@ -41,18 +42,14 @@ body {
   font-family: "Raleway", sans-serif;
 }
 .photo {
-  display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   min-height: 200px;
   align-items: flex-end;
-
   @include media-breakpoint-down(md) {
     margin-bottom: 2em;
   }
-
   img {
     max-height: 40vh;
     margin: auto;
@@ -64,6 +61,8 @@ body {
 }
 .about-me {
   padding-right: 2em;
+  flex-direction: column;
+  justify-content: center;
   h1 {
     letter-spacing: 0.02em;
   }
@@ -73,7 +72,7 @@ body {
     letter-spacing: 0.02em;
   }
 }
-.contacts {
+.contact {
   padding: 0;
   li {
     list-style-type: none;
@@ -86,6 +85,27 @@ body {
     text-decoration: underline;
     &:hover {
       text-decoration: none;
+    }
+  }
+}
+.social {
+  .badge[href]:focus img,
+  .badge[href]:hover img {
+    opacity: 0.8;
+  }
+  @include media-breakpoint-down(sm) {
+    justify-content: center;
+    .badge {
+      padding: 0.5em 1em;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .badge {
+      padding: 0.25em 0.6em;
+      // Align first item with the text left border
+      &:first-child {
+        padding-left: 0;
+      }
     }
   }
 }
