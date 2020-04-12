@@ -15,12 +15,12 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.0.0",
     "posthtml-expressions": "^1.1.0"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "sass": "^1.19.0"
+    "sass": "^1.26.3"
   }
 }
