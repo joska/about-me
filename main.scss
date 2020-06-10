@@ -64,6 +64,9 @@ body {
    flex-direction: column;
    justify-content: center;
    @include media-breakpoint-up(md) {
+      .text-wrapper{
+         max-width: 80%;
+      }
       -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 1.5s; /* Firefox < 16 */
       -ms-animation: fadein 1.5s; /* Internet Explorer */
