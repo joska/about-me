@@ -37,42 +37,49 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700&subset=latin-ext');
 
+html {
+   @include media-breakpoint-up(lg) {
+      background: url(img/background.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      // TODO dát 100% div kvůli IE
+      //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/background.jpg', sizingMethod='scale');
+      //-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/background.jpg', sizingMethod='scale')";
+   }
+}
 body {
    color: #5f5145;
    font-family: 'Raleway', sans-serif;
+   background: none;
 }
 .photo {
    justify-content: center;
    flex-direction: column;
    text-align: center;
-   min-height: 200px;
    align-items: flex-end;
-   @include media-breakpoint-down(md) {
-      margin-bottom: 2em;
-   }
    img {
-      max-height: 40vh;
-      margin: auto;
+      max-height: 15vh;
+      min-height: 100px;
+      margin: 2em auto 2em auto;
+
+      @include media-breakpoint-up(sm) {
+         max-height: 20vh;
+         min-height: 200px;
+      }
+      @include media-breakpoint-up(md) {
+         margin: 3em auto 3em auto;
+      }
       @include media-breakpoint-up(lg) {
-         max-height: 100vh;
-         margin-bottom: 0em;
+         display: none;
       }
    }
 }
 .about-me {
-   padding-right: 2em;
    flex-direction: column;
    justify-content: center;
-   @include media-breakpoint-up(md) {
-      .text-wrapper{
-         max-width: 80%;
-      }
-      -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: fadein 1.5s; /* Firefox < 16 */
-      -ms-animation: fadein 1.5s; /* Internet Explorer */
-      -o-animation: fadein 1.5s; /* Opera < 12.1 */
-      animation: fadein 1.5s;
-   }
+
    @keyframes fadein {
       from {
          opacity: 0;
@@ -137,9 +144,37 @@ body {
          text-decoration: none;
       }
    }
+
+   @include media-breakpoint-up(md) {
+      .text-wrapper{
+         padding: 0 10%;
+         max-width: 630px;
+      }
+   }
+
+   @include media-breakpoint-up(lg) {
+      padding: 5em 4em 5em 5em;
+      min-height: 100vh;
+      background: rgba(255, 255, 255);
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 6%, rgba(255,255,255,0.5) 100%);
+      -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 1.5s; /* Firefox < 16 */
+      -ms-animation: fadein 1.5s; /* Internet Explorer */
+      -o-animation: fadein 1.5s; /* Opera < 12.1 */
+      animation: fadein 1.5s;
+      .text-wrapper{
+         padding: 0;
+      }
+   }
+
+   @include media-breakpoint-up(xl) {
+      padding: 5em 10% 5em 10%;
+   }
+
 }
 .contact {
    padding: 0;
+   margin-bottom: 0; //bootstrap __reboot
    li {
       list-style-type: none;
       line-height: 1.75em;
@@ -155,16 +190,35 @@ body {
    }
 }
 .social {
+   // TODO flex
+   padding: 2em 0;
+   margin-bottom: 0 !important; //bootstrap _spacing
+   justify-content: center;
+   .badge {
+      padding: 1em 0;
+      width: 33%;
+      text-align: center;
+      //&:nth-child(even) {
+      //   text-align: left;
+      //}
+   }
    .badge[href]:focus img,
    .badge[href]:hover img {
       opacity: 0.8;
    }
-   @include media-breakpoint-down(sm) {
-      justify-content: center;
-      .badge {
-         padding: 0.5em 1em;
+
+   @include media-breakpoint-up(sm) {
+      .badge{
+         padding: 1em;
+         width: auto;
       }
    }
+
+   @include media-breakpoint-up(md) {
+      padding: 3em 0;
+      justify-content: left;
+   }
+
    @include media-breakpoint-up(md) {
       .badge {
          padding: 0.25em 0.6em;
@@ -173,5 +227,8 @@ body {
             padding-left: 0;
          }
       }
+   }
+   @include media-breakpoint-up(lg) {
+      padding: 2em 0 0 0; // the botom padding is solved in text-wrapper
    }
 }
