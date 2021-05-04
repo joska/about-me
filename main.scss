@@ -155,7 +155,7 @@ body {
    @include media-breakpoint-up(lg) {
       padding: 5em 4em 5em 5em;
       min-height: 100vh;
-      background: rgba(255, 255, 255);
+      background: rgba(255, 255, 255, 1);
       background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 6%, rgba(255,255,255,0.5) 100%);
       -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 1.5s; /* Firefox < 16 */
