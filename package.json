@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel serve './src/index.*'",
-    "prod": "parcel build './src/index.*'",
+    "prod": "parcel build './src/index.*' --public-url https://sekava.cz",
     "report": "parcel build './src/index.*' --reporter @parcel/reporter-bundle-analyzer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
